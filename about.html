@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Learn about CozyNest Blankets BW and explore our comfortable blanket collection."
+  >
+
+  <title>About Us | CozyNest Blankets BW</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* =================================
+       PRODUCT DETAILS SECTION
+    ================================== */
+
+    .about-products {
+      padding: 80px 5%;
+      background: #fffaf5;
+    }
+
+    .about-products-heading {
+      max-width: 750px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .about-products-heading h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      color: #482012;
+      margin: 12px 0;
+    }
+
+    .about-products-heading p {
+      color: #806e65;
+      line-height: 1.8;
+    }
+
+    .about-product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .about-product-card {
+      background: #fff;
+      overflow: hidden;
+      border: 1px solid #eee4dc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(72, 32, 18, 0.10);
+    }
+
+    .about-product-image {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      background: #f5eee9;
+    }
+
+    .about-product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .about-product-card:hover .about-product-image img {
+      transform: scale(1.05);
+    }
+
+    .about-product-info {
+      padding: 24px;
+    }
+
+    .about-product-category {
+      color: #c94f25;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .about-product-info h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      color: #482012;
+      margin-bottom: 12px;
+    }
+
+    .about-product-description {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #806e65;
+      min-height: 75px;
+    }
+
+    .about-product-features {
+      padding: 15px 0;
+      margin: 15px 0;
+      border-top: 1px solid #eee4dc;
+      border-bottom: 1px solid #eee4dc;
+    }
+
+    .about-product-features p {
+      font-size: 13px;
+      color: #604536;
+      margin: 7px 0;
+    }
+
+    .about-product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .about-product-price {
+      font-size: 21px;
+      font-weight: 700;
+      color: #a94c25;
+    }
+
+    .about-product-bottom .button {
+      font-size: 13px;
+      padding: 12px 18px;
+      text-decoration: none;
+    }
+
+    .about-products-footer {
+      text-align: center;
+      margin-top: 45px;
+    }
+
+
+    /* =================================
+       PRODUCT INFORMATION BANNER
+    ================================== */
+
+    .product-information {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+      max-width: 1300px;
+      margin: 75px auto 0;
+      padding: 45px;
+      background: #f7eee8;
+    }
+
+    .product-information h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      color: #482012;
+      margin: 12px 0;
+    }
+
+    .product-information p {
+      color: #806e65;
+      line-height: 1.8;
+    }
+
+    .product-information-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .product-information-item {
+      padding: 18px;
+      background: #fffaf5;
+    }
+
+    .product-information-item h3 {
+      color: #a94c25;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .product-information-item p {
+      font-size: 13px;
+      margin: 0;
+    }
+
+
+    /* =================================
+       FOOTER
+    ================================== */
+
+    .site-footer {
+      background: #482012;
+      color: #fffaf5;
+      padding: 36px 5% 18px;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr auto;
+      align-items: center;
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+      min-height: 210px;
+    }
+
+    .footer-logo {
+      display: block;
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+    }
+
+    .footer-brand p {
+      margin: 12px 0 0;
+      font-size: 14px;
+    }
+
+    .footer-newsletter h2 {
+      margin: 0 0 6px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+    }
+
+    .footer-newsletter > p {
+      margin: 0 0 14px;
+      font-size: 14px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      width: 100%;
+      max-width: 470px;
+      min-height: 46px;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fffaf5;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 0;
+      padding: 0 16px;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: #32170d;
+      font: inherit;
+    }
+
+    .newsletter-form button {
+      padding: 0 24px;
+      border: 0;
+      background: #c94f25;
+      color: #fff;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .newsletter-form button:hover {
+      background: #ad3e1c;
+    }
+
+    .newsletter-message {
+      min-height: 18px;
+      margin-top: 8px !important;
+      font-size: 13px !important;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 50%;
+      background: #fffaf5;
+      color: #482012;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      background: #c94f25;
+      color: #fff;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 20px auto 0;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 250, 245, 0.25);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+
+    /* =================================
+       RESPONSIVE DESIGN
+    ================================== */
+
+    @media (max-width: 900px) {
+
+      .about-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-information {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1.25fr;
+      }
+
+      .footer-social {
+        grid-column: 1 / -1;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .about-product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-product-image {
+        height: 330px;
+      }
+
+      .about-products-heading h2 {
+        font-size: 30px;
+      }
+
+      .product-information {
+        padding: 25px;
+      }
+
+      .product-information-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding: 12px 0;
+      }
+
+      .footer-logo {
+        width: 130px;
+        height: 130px;
+      }
+
+      .newsletter-form {
+        max-width: 100%;
+      }
+
+      .footer-social {
+        grid-column: auto;
+      }
+
+    }
+
+
+    @media (max-width: 400px) {
+
+      .about-product-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =================================
+       HEADER
+  ================================== -->
+
+  <header class="site-header">
+
+    <a class="brand" href="index.html" aria-label="CozyNest home">
+
+      <img
+        class="brand-logo"
+        src="assets/logo.png"
+        alt="CozyNest Blankets BW"
+      >
+
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNavigation"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <nav class="nav-links" id="mainNavigation" aria-label="Main navigation">
+
+      <a href="index.html">Home page</a>
+
+      <a class="active" href="about.html" aria-current="page">
+        About us
+      </a>
+
+     
+
+      <a href="order.html">Order page</a>
+
+      <a href="contact.html">Contact us</a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =================================
+         ABOUT US SECTION
+    ================================== -->
+
+    <section class="about section-wrap page-section" id="about">
+
+      <div class="about-image">
+
+        <img
+          src="assets/hero-bedroom.jpg"
+          alt="A cosy bedroom with comfortable blankets"
+        >
+
+      </div>
+
+
+      <div class="about-copy">
+
+        <p class="eyebrow">ABOUT COZYNEST</p>
+
+        <h1>Comfort for every home.</h1>
+
+        <p>
+          At CozyNest Blankets BW, we believe comfort should be part of every day.
+          We offer soft, beautiful blankets for relaxing at home, thoughtful
+          gifting and keeping warm on chilly days.
+        </p>
+
+        <p>
+          Our goal is to make it easy to find a blanket that feels right for
+          you—whether you love simple neutrals, cosy textures or a pop of colour.
+        </p>
+
+        <a class="button button-primary" href="shop.html">
+          Explore our blankets →
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         PRODUCT DETAILS SECTION
+    ================================== -->
+
+    <section class="about-products page-section" id="products">
+
+
+      <!-- SECTION INTRODUCTION -->
+
+      <div class="about-products-heading">
+
+        <p class="eyebrow">PRODUCTS DETAILS</p>
+
+        <h2>Discover comfort in every blanket.</h2>
+
+        <p>
+          At CozyNest Blankets BW, our collection brings together
+          softness, warmth and beautiful designs. Explore our featured
+          blankets and find the perfect addition to your home.
+        </p>
+
+      </div>
+
+
+
+      <!-- VIEW MORE PRODUCTS -->
+
+      <div class="about-products-footer">
+
+        <a class="button button-primary" href="shop.html">
+          Explore our full collection →
+        </a>
+
+      </div>
+
+
+
+      <!-- =================================
+           PRODUCT INFORMATION
+      ================================== -->
+
+      <div class="product-information">
+
+
+        <div>
+
+          <p class="eyebrow">WHY CHOOSE COZYNEST?</p>
+
+          <h2>More than just a blanket.</h2>
+
+          <p>
+            We want every CozyNest product to bring a sense of comfort
+            and warmth into your everyday life. Our collection offers
+            different styles to complement your home and personal taste.
+          </p>
+
+        </div>
+
+
+
+        <div class="product-information-list">
+
+
+          <article class="product-information-item">
+
+            <h3>Comfort and softness</h3>
+
+            <p>
+              Enjoy comfortable blanket options for relaxing
+              and keeping warm.
+            </p>
+
+          </article>
+
+
+          <article class="product-information-item">
+
+            <h3>Beautiful designs</h3>
+
+            <p>
+              Explore different textures, colours and styles
+              for your living space.
+            </p>
+
+          </article>
+
+
+          <article class="product-information-item">
+
+            <h3>Everyday versatility</h3>
+
+            <p>
+              Find blankets suitable for bedrooms, living rooms
+              and thoughtful gifting.
+            </p>
+
+          </article>
+
+
+          <article class="product-information-item">
+
+            <h3>Customer support</h3>
+
+            <p>
+              Contact us for assistance with product enquiries
+              and placing your order.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         ORDER CALL TO ACTION
+    ================================== -->
+
+    <section class="order-section">
+
+      <div class="order-inner">
+
+        <div>
+
+          <p class="eyebrow">COMFORT STARTS HERE</p>
+
+          <h2>Find your cosy favourite.</h2>
+
+          <p>
+            Browse our collection and contact us with any questions.
+          </p>
+
+        </div>
+
+
+        <a class="button button-primary" href="shop.html">
+          Visit the shop →
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =================================
+       FOOTER
+  ================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+
+      <!-- FOOTER BRAND -->
+
+      <div class="footer-brand">
+
+        <a href="index.html" aria-label="CozyNest home">
+
+          <img
+            src="assets/logo.png"
+            alt="CozyNest Blankets BW"
+            class="footer-logo"
+          >
+
+        </a>
+
+        <p>Bring comfort closer to you.</p>
+
+      </div>
+
+
+
+      <!-- NEWSLETTER -->
+
+      <div class="footer-newsletter">
+
+        <h2>Join our newsletter</h2>
+
+        <p>Be the first to hear about new arrivals and offers.</p>
+
+
+        <form class="newsletter-form" id="newsletterForm">
+
+          <label class="visually-hidden" for="newsletterEmail">
+            Your email address
+          </label>
+
+          <input
+            type="email"
+            id="newsletterEmail"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          >
+
+          <button type="submit">
+            Subscribe
+          </button>
+
+        </form>
+
+
+        <p
+          class="newsletter-message"
+          id="newsletterMessage"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+
+
+      <!-- SOCIAL MEDIA -->
+
+      <div class="footer-social" aria-label="Social media links">
+
+        <!-- Replace # with your social media profile links -->
+
+        <a href="#" aria-label="Facebook">f</a>
+
+        <a href="#" aria-label="Instagram">◎</a>
+
+        <a href="#" aria-label="TikTok">♪</a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+      <p>
+        © <span id="year"></span> CozyNest Blankets BW.
+        All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =================================
+       JAVASCRIPT
+  ================================== -->
+
+  <script src="js/script.js"></script>
+
+
+  <script>
+
+    // MOBILE NAVIGATION
+
+    const toggle = document.getElementById("menuToggle");
+
+    const nav = document.getElementById("mainNavigation");
+
+
+    toggle.addEventListener("click", () => {
+
+      const isOpen =
+        toggle.getAttribute("aria-expanded") === "true";
+
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+
+      toggle.setAttribute(
+        "aria-label",
+        isOpen ? "Open navigation menu" : "Close navigation menu"
+      );
+
+      nav.classList.toggle("is-open", !isOpen);
+
+    });
+
+
+    // CLOSE MENU AFTER SELECTING A LINK
+
+    nav.querySelectorAll("a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        toggle.setAttribute("aria-expanded", "false");
+
+        toggle.setAttribute("aria-label", "Open navigation menu");
+
+        nav.classList.remove("is-open");
+
+      });
+
+    });
+
+
+    // AUTOMATIC COPYRIGHT YEAR
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // NEWSLETTER FORM
+
+    document
+      .getElementById("newsletterForm")
+      .addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const email =
+          document.getElementById("newsletterEmail").value;
+
+        const subject = encodeURIComponent(
+          "Newsletter subscription"
+        );
+
+        const body = encodeURIComponent(
+          "Please add this email to the newsletter: " + email
+        );
+
+
+        document.getElementById("newsletterMessage").textContent =
+          "Your email app will open to send your subscription request.";
+
+
+        window.location.href =
+          "mailto:YOUR-EMAIL@example.com?subject=" +
+          subject + "&body=" + body;
+
+      });
+
+  </script>
+
+</body>
+
+</html>
